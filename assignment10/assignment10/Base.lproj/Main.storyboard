@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25098" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-Ct-001">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25073"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nav-Sc-001">
+            <objects>
+                <navigationController id="nav-Ct-001" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="nav-Br-001">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lst-VC-001" kind="relationship" relationship="rootViewController" id="nav-Rl-001"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-Fr-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="4"/>
+        </scene>
+        <!--Города Казахстана-->
+        <scene sceneID="lst-Sc-001">
+            <objects>
+                <viewController id="lst-VC-001" customClass="ViewController" customModule="assignment10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lst-Vw-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lst-Bg-001" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lst-Tb-001">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteCell" id="cel-Pr-001" customClass="FavoriteCell" customModule="assignment10" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cel-Pr-001" id="cel-Cv-001">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cel-Fx-001" userLabel="Glass Card">
+                                                    <rect key="frame" x="16" y="6" width="361" height="88"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cel-Fc-001">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="88"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cel-St-001">
+                                                                <rect key="frame" x="12" y="12" width="337" height="64"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cel-Im-001">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="64" id="cel-Ih-001"/>
+                                                                            <constraint firstAttribute="width" constant="64" id="cel-Iw-001"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="12"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cel-Lb-001">
+                                                                        <rect key="frame" x="76" y="20" width="261" height="24"/>
+                                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="cel-St-001" firstAttribute="top" secondItem="cel-Fc-001" secondAttribute="top" constant="12" id="cel-C01-001"/>
+                                                            <constraint firstItem="cel-St-001" firstAttribute="leading" secondItem="cel-Fc-001" secondAttribute="leading" constant="12" id="cel-C02-001"/>
+                                                            <constraint firstAttribute="trailing" secondItem="cel-St-001" secondAttribute="trailing" constant="12" id="cel-C03-001"/>
+                                                            <constraint firstAttribute="bottom" secondItem="cel-St-001" secondAttribute="bottom" constant="12" id="cel-C04-001"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <blurEffect style="systemThinMaterial"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </visualEffectView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cel-Fx-001" firstAttribute="top" secondItem="cel-Cv-001" secondAttribute="top" constant="6" id="cel-C05-001"/>
+                                                <constraint firstItem="cel-Fx-001" firstAttribute="leading" secondItem="cel-Cv-001" secondAttribute="leading" constant="16" id="cel-C06-001"/>
+                                                <constraint firstAttribute="trailing" secondItem="cel-Fx-001" secondAttribute="trailing" constant="16" id="cel-C07-001"/>
+                                                <constraint firstAttribute="bottom" secondItem="cel-Fx-001" secondAttribute="bottom" constant="6" id="cel-C08-001"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="cel-Im-001" id="cel-Oi-001"/>
+                                            <outlet property="titleLabel" destination="cel-Lb-001" id="cel-Ot-001"/>
+                                            <segue destination="det-VC-001" kind="show" identifier="showDetail" id="seg-Sh-001"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lst-Sa-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lst-Bg-001" firstAttribute="top" secondItem="lst-Vw-001" secondAttribute="top" id="lst-C01-001"/>
+                            <constraint firstItem="lst-Bg-001" firstAttribute="leading" secondItem="lst-Vw-001" secondAttribute="leading" id="lst-C02-001"/>
+                            <constraint firstAttribute="trailing" secondItem="lst-Bg-001" secondAttribute="trailing" id="lst-C03-001"/>
+                            <constraint firstAttribute="bottom" secondItem="lst-Bg-001" secondAttribute="bottom" id="lst-C04-001"/>
+                            <constraint firstItem="lst-Tb-001" firstAttribute="top" secondItem="lst-Sa-001" secondAttribute="top" id="lst-C05-001"/>
+                            <constraint firstItem="lst-Tb-001" firstAttribute="leading" secondItem="lst-Sa-001" secondAttribute="leading" id="lst-C06-001"/>
+                            <constraint firstItem="lst-Sa-001" firstAttribute="trailing" secondItem="lst-Tb-001" secondAttribute="trailing" id="lst-C07-001"/>
+                            <constraint firstItem="lst-Sa-001" firstAttribute="bottom" secondItem="lst-Tb-001" secondAttribute="bottom" id="lst-C08-001"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Города Казахстана" largeTitleDisplayMode="always" id="lst-Ni-001"/>
+                    <connections>
+                        <outlet property="tableView" destination="lst-Tb-001" id="lst-Ot-001"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lst-Fr-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="4"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="det-Sc-001">
+            <objects>
+                <viewController id="det-VC-001" customClass="DetailViewController" customModule="assignment10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="det-Vw-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="det-Bg-001" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="det-Sv-001">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="det-St-001" userLabel="Content Stack">
+                                        <rect key="frame" x="16" y="16" width="361" height="428"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="det-Im-001" userLabel="Photo Image View">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="260"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="260" id="det-Ih-001"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="det-Fx-001" userLabel="Glass Card">
+                                                <rect key="frame" x="0.0" y="276" width="361" height="152"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="det-Fc-001">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="152"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="det-Is-001" userLabel="Info Stack">
+                                                            <rect key="frame" x="16" y="16" width="329" height="120"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Lt-001" userLabel="Title Label">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="33.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подзаголовок" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Ls-001" userLabel="Subtitle Label">
+                                                                    <rect key="frame" x="0.0" y="41.666666666666664" width="101.66666666666667" height="18"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="det-Ss-001" userLabel="Stars Stack">
+                                                                    <rect key="frame" x="0.0" y="67.666666666666657" width="136" height="24"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="det-S1-001">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="24" id="det-Sw-001"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="det-S2-001">
+                                                                            <rect key="frame" x="28" y="0.0" width="24" height="24"/>
+                                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="det-S3-001">
+                                                                            <rect key="frame" x="56" y="0.0" width="24" height="24"/>
+                                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="det-S4-001">
+                                                                            <rect key="frame" x="84" y="0.0" width="24" height="24"/>
+                                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                        </imageView>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="det-S5-001">
+                                                                            <rect key="frame" x="112" y="0.0" width="24" height="24"/>
+                                                                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="det-Sh-001"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание города." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="det-Ld-001" userLabel="Description Label">
+                                                                    <rect key="frame" x="0.0" y="99.666666666666657" width="144.66666666666666" height="20.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="det-Is-001" firstAttribute="top" secondItem="det-Fc-001" secondAttribute="top" constant="16" id="det-C01-001"/>
+                                                        <constraint firstItem="det-Is-001" firstAttribute="leading" secondItem="det-Fc-001" secondAttribute="leading" constant="16" id="det-C02-001"/>
+                                                        <constraint firstAttribute="trailing" secondItem="det-Is-001" secondAttribute="trailing" constant="16" id="det-C03-001"/>
+                                                        <constraint firstAttribute="bottom" secondItem="det-Is-001" secondAttribute="bottom" constant="16" id="det-C04-001"/>
+                                                    </constraints>
+                                                </view>
+                                                <blurEffect style="systemThinMaterial"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </visualEffectView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="det-St-001" firstAttribute="top" secondItem="det-Cl-001" secondAttribute="top" constant="16" id="det-C05-001"/>
+                                    <constraint firstItem="det-St-001" firstAttribute="leading" secondItem="det-Cl-001" secondAttribute="leading" constant="16" id="det-C06-001"/>
+                                    <constraint firstItem="det-Cl-001" firstAttribute="trailing" secondItem="det-St-001" secondAttribute="trailing" constant="16" id="det-C07-001"/>
+                                    <constraint firstItem="det-Cl-001" firstAttribute="bottom" secondItem="det-St-001" secondAttribute="bottom" constant="24" id="det-C08-001"/>
+                                    <constraint firstItem="det-St-001" firstAttribute="width" secondItem="det-Fl-001" secondAttribute="width" constant="-32" id="det-C09-001"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="det-Cl-001"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="det-Fl-001"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="det-Sa-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="det-Bg-001" firstAttribute="top" secondItem="det-Vw-001" secondAttribute="top" id="det-C10-001"/>
+                            <constraint firstItem="det-Bg-001" firstAttribute="leading" secondItem="det-Vw-001" secondAttribute="leading" id="det-C11-001"/>
+                            <constraint firstAttribute="trailing" secondItem="det-Bg-001" secondAttribute="trailing" id="det-C12-001"/>
+                            <constraint firstAttribute="bottom" secondItem="det-Bg-001" secondAttribute="bottom" id="det-C13-001"/>
+                            <constraint firstItem="det-Sv-001" firstAttribute="top" secondItem="det-Sa-001" secondAttribute="top" id="det-C14-001"/>
+                            <constraint firstItem="det-Sv-001" firstAttribute="leading" secondItem="det-Sa-001" secondAttribute="leading" id="det-C15-001"/>
+                            <constraint firstItem="det-Sa-001" firstAttribute="trailing" secondItem="det-Sv-001" secondAttribute="trailing" id="det-C16-001"/>
+                            <constraint firstItem="det-Sa-001" firstAttribute="bottom" secondItem="det-Sv-001" secondAttribute="bottom" id="det-C17-001"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="det-Ni-001"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="det-Ld-001" id="det-O1-001"/>
+                        <outlet property="itemImageView" destination="det-Im-001" id="det-O2-001"/>
+                        <outlet property="starsStackView" destination="det-Ss-001" id="det-O3-001"/>
+                        <outlet property="subtitleLabel" destination="det-Ls-001" id="det-O4-001"/>
+                        <outlet property="titleLabel" destination="det-Lt-001" id="det-O5-001"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="det-Fr-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="393" height="852"/>
+        <image name="star" catalog="system" width="32" height="32"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.55294117649999996" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
